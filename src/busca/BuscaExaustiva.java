@@ -42,3 +42,4 @@ public class BuscaExaustiva {
         leitor.close();
     }
 }
+ 
