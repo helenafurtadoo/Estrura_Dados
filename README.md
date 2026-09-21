@@ -8,6 +8,7 @@ O objetivo deste projeto é colocar em prática conceitos fundamentais relaciona
 
 ### Aula 01 — Vetores e Matrizes
 
+
 Exercícios envolvendo armazenamento, acesso e manipulação de dados utilizando vetores e matrizes.
 
 ### Aula 02 — Busca e Ordenação
@@ -33,6 +34,8 @@ Implementação e estudo das estruturas de **fila (FIFO)** e **pilha (LIFO)**, e
 ### Aula 07 — Deques
 
 Estudo e implementação de **deques (Double-Ended Queues)**, estruturas que permitem a inserção e remoção de elementos tanto no início quanto no final.
+
+### Aula 08 - Matriz espresas
 
 ## Tecnologias
 
