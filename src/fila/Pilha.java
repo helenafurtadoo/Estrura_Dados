@@ -6,8 +6,7 @@ public class Pilha {
 
     //metodos da classe
     public void push(int numero) {
-        cabeca = new No(numero, cabeca) {
-            cabeca = new No(numero, cabeca);
+        cabeca = new No(numero, cabeca);
         }
         public void pop() {
             //caso MUITO facil: pilha vazia
@@ -18,5 +17,4 @@ public class Pilha {
         System.out.println(cabeca.getNumero());
         cabeca = cabeca.getProximo();
         }
-    }
 }

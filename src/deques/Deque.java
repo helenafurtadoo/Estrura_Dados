@@ -1,3 +1,5 @@
+package deques;
+
 public class Deque {
     //prop´riedades da classe
     private No cabeca = null;
@@ -9,7 +11,7 @@ public class Deque {
 
     public void entrarPelaDireita(int numero) {
         //cenario facil : deque vazio
-        if |(cabecxa == null) {
+        if (cabeca == null) {
             cabeca = new No(numero,cabeca);
             return;
         }
@@ -19,7 +21,7 @@ public class Deque {
         while (ultimo.getProximo() != null) {
             ultimo = ultimo.getProximo();
         }
-        ultimo.setProximo(new No(numero, null))
+        ultimo.setProximo(new No(numero, null));
     }
     public void sairPelaEsquerda() {
         //cenario MUITO facil: deque vaizo

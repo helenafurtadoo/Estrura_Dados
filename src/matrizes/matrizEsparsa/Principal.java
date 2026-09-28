@@ -1,6 +1,8 @@
+package matrizes.matrizEsparsa;
+
 public class Principal {
     public static void main(String[] args) {
-        MatrizEparsa objMatrizEsparsa = new MatrizEsparsa(3);
+        MatrizEsparsa objMatrizEsparsa = new MatrizEsparsa(3);
 
         objMatrizEsparsa.inserir(5);
         objMatrizEsparsa.inserir(10);
@@ -10,7 +12,7 @@ public class Principal {
         objMatrizEsparsa.inserir(21);
         objMatrizEsparsa.imprimir();
 
-        objMstrizEsparsa = new MatrizEsparsa(16);
+        objMatrizEsparsa = new MatrizEsparsa(16);
         for(int i = 0 ; i < 1000 ; i++) {
             objMatrizEsparsa.inserir(i);
         }

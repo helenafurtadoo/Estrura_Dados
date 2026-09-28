@@ -1,3 +1,5 @@
+package matrizes.matrizEsparsa;
+
 public class Diretor {
     //prorpiedades da classe
     //representa as linhas da matriz

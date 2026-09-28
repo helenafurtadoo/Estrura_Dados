@@ -2,7 +2,7 @@ package fila;
 
 public class Principal {
     public static void main(String[] args) {
-        Fila objFila = new Fila();
+        File objFila = new File();
 
         for (int i = 0 ; i < 1000000 ; i++) {
             objFila.entrar(i);

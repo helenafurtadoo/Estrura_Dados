@@ -1,12 +1,14 @@
+package deques;
+
 public class DequeBancario { //nao é comoportmento de pilha  APENAS de FILA
     //prorpriedades da classe
     private No filaNormal = null;
     private No filaPreferencial = null;
 
     //metodos da classe
-    public voi entrar(boolean normal, int numero){
+    public void entrar(boolean normal, int numero){
         if (normal) {
-            filaNormal = new No(numero, filaNormal)
+            filaNormal = new No(numero, filaNormal);
         } else {
             filaPreferencial = new No(numero, filaPreferencial);
         }
@@ -19,7 +21,7 @@ public class DequeBancario { //nao é comoportmento de pilha  APENAS de FILA
         }
         //cenario faicl: fila so tem um unico no
         if (fila.getProximo() == null) {
-            System.out.println(fila.getNumero());]
+            System.out.println(fila.getNumero());
             return null;
         }
 
@@ -36,7 +38,7 @@ public class DequeBancario { //nao é comoportmento de pilha  APENAS de FILA
     private int contador = 0;
     public void atender() {
         //cenario MUITO facil
-        if (filaNormal == null) && (filaPreferencial == null) { //ambas as filas estao fechadas| n tem ninguem na agencia
+        if ((filaNormal == null) && (filaPreferencial == null)) { //ambas as filas estao fechadas| n tem ninguem na agencia
             contador = 0; //contador = 0, pq so tem uma fila funcionando, logo, n precisa ficar cotando quantos ta atendendo
             return;
         }
@@ -44,13 +46,15 @@ public class DequeBancario { //nao é comoportmento de pilha  APENAS de FILA
         //cenario facil: so tem gente na fila normal --> pq a filapreferencial é nula!!
         if (filaPreferencial == null) {
             filaNormal = sair(filaNormal);
-            return
+            return;
         }
 
         //cenario faicl: so tem gente na fila prefernecial
+        if (filaNormal == null) {
         filaPreferencial = sair(filaPreferencial);
         contador = 0; //contador = 0, pq so tem uma fila funcionando, logo, n precisa ficar cotando quantos ta atendendo
         return;
+        }
 
         //cenario MUITO dicil: ambas as filas tem gente
         if (contador < 3) {
@@ -61,6 +65,9 @@ public class DequeBancario { //nao é comoportmento de pilha  APENAS de FILA
             contador = 0;
         }
 
+
+    }
+}
 
         /*fazer o teste desse rodando criando uma classe Principal
         DequeBancario onjDeque = new DequeBancario();

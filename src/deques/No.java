@@ -1,11 +1,13 @@
+package deques;
+
 public class No {
     private int numero = 0;
     private No proximo = null;
 
-    public no() {
+    public No() {
     }
 
-    public No(int numero, no proximo) {
+    public No(int numero, No proximo) {
         this.numero = numero;
         this.proximo = proximo;
     }
@@ -22,7 +24,7 @@ public class No {
         return proximo;
     }
 
-    public void setProximo(no proximo) {
+    public void setProximo(No proximo) {
         this.proximo = proximo;
     }
 }

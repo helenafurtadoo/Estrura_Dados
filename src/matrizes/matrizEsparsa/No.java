@@ -1,3 +1,5 @@
+package matrizes.matrizEsparsa;
+
 public class No {
     //propriedades da classe
     private int numero = 0;

@@ -1,3 +1,5 @@
+package matrizes.matrizEsparsa;
+
 public class MatrizEsparsa {
     // propriedade da classe
     private Diretor cabeca = null;
@@ -14,17 +16,16 @@ public class MatrizEsparsa {
 
         Diretor ponteiro = cabeca; //apomta o ponteiro para a cabeca
         // enquanto procura e nao achou || E || achou o numero q ta procurando e pega o resto (q é o numero q ta procurando)
-        while((ponteiro != null0) && (ponteiro.getResto() != resto)) {
-            ponteiro = ponteiro.getProximoDiretor();
+        while((ponteiro != null) && (ponteiro.getResto() != resto)) {
+            ponteiro = ponteiro.getProximoDeretor();
         }
         //cenario de resto encontrado
         if (ponteiro != null) {
             return ponteiro;
         }
         // cenario de resto NAO encontrado (entao vai precisar criar um novo
-        cabeca = new Diretor(resto, null,  cabeca) { //cria um novo,aponta o ponteiro para nulo, e para a cabeca velha | insercao no formato de pilha, pela cabeca
+        cabeca = new Diretor(cabeca, null, resto); //cria um novo,aponta o ponteiro para nulo, e para a cabeca velha | insercao no formato de pilha, pela cabeca
         return cabeca;
-        }
     }
     //metodo da classe que vai inserir o numero
     public void inserir(int numero) {
@@ -45,7 +46,7 @@ public class MatrizEsparsa {
             // cenario facil: excluir o primeiro (aponta para o proximo do no, se for igual o numero q botou, volta para o ponteiro e aponta para o reproximo (getpoximoNo.getproximo)
             if (ponteiroDiretor.getProximoNo().getNumero() == numero) {
                 ponteiroDiretor.setProximoNo(ponteiroDiretor.getProximoNo()
-                        .getroximo());
+                        .getProximo());
                 return;
             }
             //casos dificeis -> vai precisar fazer uma procura do numero
@@ -68,16 +69,16 @@ public class MatrizEsparsa {
         System.out.println("Resto \t Números");
         Diretor ponteiroDiretor = cabeca;
         //linhas
-        while (ponteiroDireto != null) {
+        while (ponteiroDiretor != null) {
             System.out.print(ponteiroDiretor.getResto() + "\t");
-            No ponteiroNo = ponteiroDiretor.getProximo();
+            No ponteiroNo = ponteiroDiretor.getProximoNo();
          //colunas
             while (ponteiroNo != null ) {
                 System.out.print(ponteiroNo.getNumero() + ", ");
                 ponteiroNo = ponteiroNo.getProximo();
             }
             System.out.println();
-            ponteiroDiretor = ponteiroDiretor.getProximoDiretor();
+            ponteiroDiretor = ponteiroDiretor.getProximoDeretor();
         }
     }
 }
