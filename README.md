@@ -37,6 +37,8 @@ Estudo e implementação de **deques (Double-Ended Queues)**, estruturas que per
 
 ### Aula 08 - Matriz espresas
 
+### Aula 09  - Árvores
+
 ## Tecnologias
 
 * Java
